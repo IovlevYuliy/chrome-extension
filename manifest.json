@@ -1,0 +1,35 @@
+{
+    "permissions": [
+        "tabs",
+        "contextMenus",
+        "https://maps.googleapis.com/*"
+  	],
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "GeoFinder",
+    "description": "Your Extension Description", 
+	"icons": {
+          "16": "16x16.png",
+          "128": "128x128.png"
+        },
+    "background": {
+        "scripts": ["initExtension.js"]
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "16x16.png"
+            }, 
+        "default_title": "GeoFinder",
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://maps.googleapis.com https://api-maps.yandex.ru;  object-src 'self'",
+    "content_scripts": [
+        {
+            "matches": ["http://google.ru/*"],
+            "css": ["popup.css"],
+            "js": ["popup.js"]
+        }
+    ]
+}
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Настройки</title>
+    <link href='bootstrap.css' rel='stylesheet' type='text/css'>
+    <link href='popup.css' rel='stylesheet' type='text/css'>
+    <script src="jquery.js"> </script>
+
+
+</head>
+<body bgcolor="#FFF">
+    <div class="container">
+        <p>Сервис геокодирования:</p>
+        <div>
+            <p>
+                <input type = "radio" id = "GoogleMode" name = "Radio" checked> Сервис Google
+            </p>
+            <p>
+                <input type = "radio" id = "YandexMode" name = "Radio"> Сервис Yandex
+            </p>
+        </div>
+
+        <div class = "row" style="padding-top: 20px">
+            <input class = "btn btn-primary" type="button" id = "SaveOptions" value="Сохранить"/>
+            <input class = "btn btn-primary" type="button"  id = "CancelOptions" value="Закрыть"/>
+            <script src="popup.js" type='text/javascript'></script>
+        </div>
+    </div>
+</body>
+</html>
