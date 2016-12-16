@@ -63,6 +63,7 @@ function createYandexMap(address) {
                 if (res.metaData.geocoder.found == 0)
                 {
                     alert("Не удалось найти результатов по запросу: " + address);
+                    window.close();
                 }
                 myMap = new ymaps.Map("map", {
                     center: res.geoObjects.get(0).geometry.getCoordinates(),
